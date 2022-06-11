@@ -1,5 +1,6 @@
 package com.zasa.shopping_list
 
+import androidx.room.ColumnInfo
 import androidx.room.Entity
 
 /**
@@ -8,4 +9,12 @@ import androidx.room.Entity
  */
 
 @Entity(tableName = "shopping_item")
-data class ShoppingItem(var name : String, var amount : Int )
+data class ShoppingItem(
+
+    @ColumnInfo(name = "item_name")
+    var name : String,
+    @ColumnInfo(name = "item_amount")
+    var amount : Int
+    
+    )
+
